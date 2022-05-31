@@ -1,0 +1,439 @@
+/*reset*/
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body, p, h1, h2, h3, h4, h5, h6, ol, ul{
+    margin: 0;
+}
+ol, ul{
+    list-style-type: none;
+    padding: 0;
+}
+h1{font-size: 34px;}
+h2{font-size: 20px;}
+h3{font-size: 16px;}
+
+/*icon*/
+.ico {
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    background-position: center;
+}
+
+/*layout*/
+body{
+    /* background-color: #28a4c9; */
+    color: #000;
+    font-size: 12px;
+    font-family: "NanumBarunRoboto", "Roboto", "나눔바른고딕", "NanumGothic", "나눔고딕", "Helvetica Neue", "Apple SD Gothic Neo";
+}
+.wrap{
+    max-width: 940px;
+    margin: auto;
+    height: 100%;
+    overflow: hidden;
+}
+header{
+    height: 100px;
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+header > ul{
+    float: right;
+}
+nav{
+    float: left;
+    width: 240px;
+    height: 40px;
+    z-index: 999;
+}
+article{
+    margin-bottom: 50px;
+}
+.playlist > article:nth-child(4){
+    margin-bottom: 120px;
+}
+.playlist{
+    width: 57.5%;
+    float: left;
+}
+.now-play{
+    width: 32%;
+    position: relative;
+    float: right;
+    margin: 0 auto;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(80deg, #624A9E, #CE5379);
+    color: #fff;
+    clear: both;
+    z-index: 999;
+}
+
+/*header*/
+header > .logo > img{
+    float: left;
+    margin-right: 5px;
+}
+header > .logo > h1{
+    float: left;
+    font-weight: bold;
+    margin-right: 60px;
+    color: #000;
+}
+header > ul > li{
+    float: left;
+    margin-left: 20px;
+    cursor: pointer;
+}
+header > ul > li > a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    background-position: center;
+}
+header > ul > li > .ico{
+    background-image: url(../images/ico_search.png);
+    margin-top: 3px;
+}
+header > ul > li > .ico:hover{
+    opacity: 0.5;
+    transition: all .2s;
+}
+.user{
+    width: 45px;
+    height: 45px;
+    background-color: #ddd;
+    background:url("../images/profile.jpg") center no-repeat;
+    background-size: 100%;
+    border-radius: 30px;
+}
+
+/*nav*/
+nav > ul > li{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 60px;
+    cursor: pointer;
+}
+nav > ul > li > a{
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
+nav > ul > li > a:hover{
+    color: #CE5379;
+    transition: all .2s;
+}
+nav > ul > li:first-child > a{
+    color: #CE5379;
+}
+
+/*section*/
+.m-title{
+    margin-bottom: 15px;
+}
+.m-info{
+    line-height: 34px;
+    height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.slider-div > div{
+    cursor: pointer;
+}
+.now-play > p{
+    line-height: 20px;
+}
+.now-play > h2{
+    margin-bottom: 45px;
+}
+.now-play > h3{
+    line-height: 26px;
+    font-weight: normal;
+}
+.now-play > img{
+    width: 100%;
+    margin-bottom: 70px;
+}
+.ex-funtion{
+    float: left;
+    margin-top: 45px;
+    cursor: pointer;
+}
+.ex-funtion:hover{
+    opacity: 0.5;
+    transition: all .2s;
+}
+.ex-funtion > .ico{
+    float: left;
+    margin-right: 10px;
+}
+.heart{
+    background: url("../images/ico_heart.png") center no-repeat;
+    background-size: 100%;
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+}
+.heart.on{
+    background: url("../images/ico_heart_on.png") center no-repeat;
+    background-size: 100%;
+}
+.like-txt.on{
+    color: #CE5379;
+}
+.list{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+.ex-funtion > h3{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    color: black;
+}
+
+/* prev, next 버튼 css*/
+button.slick-arrow{
+    font-size:0;
+    position:absolute;
+    width:50px;
+    height:50px;
+    z-index:10;
+    top: 40%;
+}
+.slick-prev:before, .slick-next:before {
+    color: rgba(255, 0, 0, 0);
+}
+button.slick-prev{
+    background:url("../images/ico_left.png") center no-repeat;
+    background-size: 100%;
+}
+button.slick-prev:hover{
+    background:url("../images/ico_left.png") center no-repeat;
+    background-size: 100%;
+    opacity: 0.5;
+    transition: all .2s;
+}
+button.slick-next{
+    background:url("../images/ico_right.png") center no-repeat;
+    background-size: 100%;
+}
+button.slick-next:hover{
+    background:url("../images/ico_right.png") center no-repeat;
+    background-size: 100%;
+    opacity: 0.5;
+    transition: all .2s;
+}
+
+/*footer*/
+footer{
+    padding: 20px 5% 0 5%;
+}
+footer > img:first-child{
+    float: left;
+    width: 60px;
+    margin-right: 20px;
+}
+footer > div{
+    float: left;
+    margin-top: 8px;
+    line-height: 24px;
+}
+footer > .play-funtion{
+    float: right;
+}
+footer > div > h3{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+footer > div > .ico{
+    width: 30px;
+    height: 30px;
+    float: left;
+    cursor: pointer;
+    margin-top: 10px; 
+    margin-left: 10px;
+}
+footer > div > .ico:nth-child(2){
+    width: 50px;
+    height: 50px;
+    margin-top: 0;
+    margin-left: 13px;
+}
+footer > div > .ico:nth-child(4){
+    margin-left: 50px;
+}
+.play{
+    background: url("../images/ico_play.png") center no-repeat;
+    background-size: 100%;
+}
+.play.on{
+    background: url("../images/ico_stop.png") center no-repeat;
+    background-size: 100%;
+}
+.speaker{
+    background: url("../images/ico_speaker.png") center no-repeat;
+    background-size: 100%;
+}
+.speaker.on{
+    background: url("../images/ico_muted.png") center no-repeat;
+    background-size: 100%;
+}
+.repeat.on{
+    opacity: 0.5;
+}
+
+/*태블릿, 스마트폰 가로모드*/
+@media (max-width: 1030px) {
+    header{
+        padding: 30px 5% 0 5%;
+    }
+    header > .logo > h1{
+        margin-right: 30px;
+    }
+    header > nav{
+        width: 130px;
+    }
+    header > nav > ul > li{
+        margin-right: 20px;
+    }
+    .playlist{
+        width: 100%;
+        padding: 0 5%;
+    }
+    .now-play{
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    .slick-prev{
+        left: -5.5%;
+    }
+    [dir='rtl'] .slick-prev{
+        left: -5.5%;
+    }
+    .slick-next{
+        right: -5.5%;
+    }
+    [dir='rtl'] .slick-next{
+        right: -5.5%;
+    }
+    button.slick-arrow{
+        width:30px;
+        height:30px;
+    }
+    .now-title{
+        width: 40%;
+    }
+    footer > div > .ico:nth-child(4){
+        width: 0;
+        height: 0;
+        margin-left: 0;
+    }
+    footer > div > .ico:nth-child(5){
+        width: 0;
+        height: 0;
+    }
+}
+
+/*스마트폰 세로모드*/
+@media (max-width: 460px) {
+    .ico{
+        width: 30px;
+        height: 30px;
+    }
+    header{
+        margin-bottom: 0;
+    }
+    header > .logo > h1{
+        font-size: 28px;
+    }
+    header > nav{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #000;
+    }
+    header > nav > ul{
+        width: 90%;
+        margin: 0 auto;
+    }
+    header > nav > ul > li{
+        width: 30%;
+        text-align: center;
+        line-height: 60px;
+        margin-right: 5%;
+    }
+    header > nav > ul > li > a{
+        color: #fff;
+        margin-right: 0px;
+    }
+    .user{
+        width: 34px;
+        height: 34px;
+    }
+    article{
+        margin-bottom: 30px;
+    }
+    .playlist > article:nth-child(4){
+        margin-bottom: 150px;
+    }
+    footer{
+        height: 80px;
+        bottom: 60px;
+        padding: 15px 5%;
+    }
+    footer > img:first-child{
+        width: 50px;
+        margin-right: 10px;
+    }
+    .slick-prev{
+        left: -7.5%;
+    }
+    [dir='rtl'] .slick-prev{
+        left: -7.5%;
+    }
+    .slick-next{
+        right: -7.5%;
+    }
+    [dir='rtl'] .slick-next{
+        right: -7.5%;
+    }
+    .now-title{
+        width: 35%;
+        margin-top: 2px;
+    }
+    .play-funtion {
+        margin-top: 5px;
+    }
+    footer > div > h3{
+        font-size: 12px;
+    }
+    footer > div > .ico:first-child{
+        width: 0;
+        height: 0;
+    }
+    footer > div > .ico:nth-child(2){
+        width: 40px;
+        height: 40px;
+    }
+    footer > div > .ico:nth-child(3){
+        width: 20px;
+        height: 20px;
+    }
+}
